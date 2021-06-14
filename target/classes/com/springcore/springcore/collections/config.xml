@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+ xmlns="http://www.springframework.org/schema/beans"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://www.springframework.org/schema/beans
+ 
+
+ http://www.springframework.org/schema/beans/spring-beans.xsd">
+ 
+         <bean class="com.springcore.springcore.collections.Emp" name="emp1">
+         
+         <property name="name" value="Haseeb" />
+         
+        <property name="phones">
+         <list>
+         <value>788766666</value>
+         <value>78876877</value>
+         <value>78876288483</value>
+         <value>788762347</value>
+         <null>null</null>
+          </list>
+         </property>
+         
+          <property name="addresses">
+         <set>
+         <value>Delhi</value>
+         <value>Bangalore</value>
+         <value>Bihar</value>
+         <value>Delhi</value>
+         </set>
+         </property>
+         
+         <property name="coursees">
+         <map>
+         <entry key="java" value="2 months" />
+         <entry key="python" value="5 months" />
+         <entry key="data base" value="6months" />
+         </map>
+         </property>
+        </bean>
+
+ <!-- using attribute tags -->
+ 
+       <!--   <bean class="com.springcore.Emp" name="emp1">
+         
+         <property name="studentId" value="2345" />
+        
+          <property name="studentName" value="Haseeb Akhtar" />
+        
+          <property name="studentAddress" value="Bangalore" />
+        
+         
+        </bean> -->
+        
+       <!--  Second Student Object -->
+       
+      <!--   <bean class="com.springcore.springcore.Student" name="Student2">
+         
+         <property name="studentId" value="23466" />
+        
+          <property name="studentName" value="Mohammad Rahman" />
+        
+          <property name="studentAddress" value="Delhi" />
+        
+         
+        </bean> -->
+        
+       <!--  using p:schema tag -->
+       
+     <!--    <bean class="com.springcore.springcore.Student" name="Student2" p:studentId="1234" p:studentName="Haseeb" p:studentAddress="Bihar" />
+  -->
+</beans>

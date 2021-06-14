@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="
+http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-2.5.xsd">
+<!--    standalon list -->
+
+     <util:list list-class="java.util.Vector"
+      id="mybestfriends" >
+      
+     <value>Mohamamd</value>
+      <value>Rahman</value>
+       <value>Haseeb</value>
+        <value>Akhatr</value>
+         <value>Jamil</value>
+    </util:list>
+    <util:map map-class="java.util.HashMap" id="fees">
+    <entry key="spring framwork" value="8000" />
+    <entry key="spring boot" value="6000" />
+    <entry key="core java" value="9000" />
+    <entry key="data structure" value="10000" />
+    
+    
+    </util:map>
+    
+   <!--  standalon properties
+     -->
+     
+     <util:properties id="dbconnection">
+     <prop key="driver">com.mysql.jdbc.Driver</prop>
+     <prop key="username">root</prop>
+     <prop key="password">root</prop>
+     <prop key="url">mysql:jdbc://localhost:3306/test</prop>
+     
+     </util:properties>
+ <bean class=" com.springcore.standalon.collection.Person" name="person1">
+ 
+ <!-- <property name="friends">
+ <ref bean="mybestfriends" />
+ </property> -->
+ 
+ <property name="friends" ref="mybestfriends" />
+ <property name="feestruture" ref="fees"></property>
+ <property name="properties" ref="dbconnection"></property>
+ 
+ 
+ </bean>
+ 
+</beans>

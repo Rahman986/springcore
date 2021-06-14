@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://www.springframework.org/schema/beans
+
+ http://www.springframework.org/schema/beans/spring-beans.xsd">
+ 
+ 
+ <bean class="com.springcore.springcore.ci.Certi" name="cer">
+ <property name="name" value ="Phyton programing language" />
+  </bean>
+  
+  <bean class=" com.springcore.springcore.ci.Person" name="person">
+  <constructor-arg value="Haseeb" />
+  <constructor-arg value="12" />
+  <constructor-arg ref="cer" />
+  </bean>
+ 
+ 
+<bean class="com.springcore.springcore.ci.Addition" name="add">
+<constructor-arg value="12" type="int" index="1" />
+<constructor-arg value="30" type="int" index="0" />
+
+
+</bean> 
+
+ 
+</beans>
