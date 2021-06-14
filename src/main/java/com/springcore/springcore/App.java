@@ -19,6 +19,8 @@ public class App
        Student student1=(Student)context.getBean("Student1");
        Student student2=(Student)context.getBean("Student2");
        System.out.println(student1+"\n"+student2);
+       
+       System.out.println("Hello Java");
     	
     	
 
